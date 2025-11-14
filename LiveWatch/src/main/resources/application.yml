@@ -1,0 +1,31 @@
+spring:
+  application:
+    name: LiveWatch
+  redis:
+    host: localhost
+    port: 6379
+    lettuce:
+      pool:
+        max-active: 100
+        max-idle: 50
+        min-idle: 10
+      timeout: 5000
+
+# Server capacity configuration
+app:
+  server:
+    max-users: 1000000        # Maximum users per server instance
+    warning-threshold: 800000 # Warning when approaching capacity
+    enable-load-balancing: true
+
+management:
+  server:
+    port: 8081 # Expose metrics on a different port
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  metrics:
+    export:
+      prometheus:
+        enabled: true

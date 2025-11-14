@@ -19,11 +19,13 @@ Lombok
 
 🌐 Frontend (React)
 
-React 18+
+HTML
+
+Javascript
 
 @stomp/stompjs & sockjs-client for real-time WebSocket communication
 
-TailwindCSS / CSS for UI styling
+CSS for UI styling
 
 ⚙️ Infrastructure
 

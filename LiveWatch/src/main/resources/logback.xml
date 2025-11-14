@@ -1,37 +1,34 @@
 <configuration>
     <appender name="myFileAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
-
         <file>log/logger.log</file>
-
         <encoder>
             <pattern>
-                %d{HH.mm.ss.SSS} [%thread] %-5level %logger{36} - %msg %n
+                %d{HH:mm:ss.SSS} [%thread] %-5level %logger{30} %msg %n
             </pattern>
         </encoder>
+
         <rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
-            <fileNamePattern>log/archived/logger.%i.log</fileNamePattern>
+            <fileNamePattern>log/achieved/logger.%i.log</fileNamePattern>
             <minIndex>1</minIndex>
             <maxIndex>10</maxIndex>
+
         </rollingPolicy>
 
         <triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
             <maxFileSize>10MB</maxFileSize>
         </triggeringPolicy>
-
-
-
     </appender>
 
     <appender name="myConsoleAppender" class="ch.qos.logback.core.ConsoleAppender">
         <encoder>
             <pattern>
-                %d{HH.mm.ss.SSS} [%thread] %-5level %logger{36} - %msg %n
+                %d{HH:mm:ss.SSS} [%thread] %-5level %logger{30} %msg %n
             </pattern>
         </encoder>
     </appender>
 
     <root level="INFO">
-        <appender-ref ref="myConsoleAppender" />
         <appender-ref ref="myFileAppender" />
+        <appender-ref ref="myConsoleAppender" />
     </root>
 </configuration>

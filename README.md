@@ -169,6 +169,8 @@ Data Flow:
 4) Scale horizontally: Ready to add more servers when needed
 5) Monitor everything: Complete observability for production operations.
 
+### RUN Docker container
+`docker-compose up --build`  in your terminal
 
 ### 🏁 License
 

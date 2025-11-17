@@ -172,6 +172,9 @@ Data Flow:
 ### RUN Docker container
 `docker-compose up --build`  in your terminal
 
+### Stop Docker container
+`docker-compose down` in your terminal
+
 ### 🏁 License
 
 This project is licensed under the MIT License – free to use and modify.
